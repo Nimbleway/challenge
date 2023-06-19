@@ -1,4 +1,4 @@
-<p>![Alt text](/assets//v1.png)</p>
+<p><img src="/assets/v1.png" /></p>
 
 <h1 align="center">AI wizards, time to shine!</h1>
 <h2 align="center"> 
