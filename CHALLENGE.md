@@ -11,7 +11,7 @@ To accomplish this, you will utilize **Nimble's Web API** to fetch the websites'
 Example:
 
 ```sh
-$ python ./solution "https://www.gsmarena.com/samsung-phones-9.php"
+$ python ./solution.py "https://www.gsmarena.com/samsung-phones-9.php"
 
 https://www.gsmarena.com/samsung_galaxy_f54-12239.php
 https://www.gsmarena.com/samsung_galaxy_a24_4g-12176.php
@@ -21,7 +21,7 @@ https://www.gsmarena.com/samsung_galaxy_a54-12070.php
 https://www.gsmarena.com/samsung_galaxy_a34-12074.php
 ...
 
-$ python ./solution "https://www.etsy.com/search?q=handmade+furniture"
+$ python ./solution.py "https://www.etsy.com/search?q=handmade+furniture"
 
 https://www.etsy.com/listing/965245133/custom-neon-sign-neon-sign-aesthetic
 https://www.etsy.com/listing/1203360316/custom-neon-sign-neon-sign-aesthetic
@@ -34,9 +34,10 @@ https://www.etsy.com/listing/1425154495/record-player-stand-vinyl-record-storage
 
 ## Rules
 
-1. Using Nimble's Web API is **optional**, but very recommended.
-1. Using OpenAI's API is **optional**, but very recommended.
+1. Using Nimble's Web API is **optional**, but very recommended to avoid being blocked by anti-bots.
+1. Using OpenAI's API is **optional**, but very recommended as it is today's leading provider of integration with LLMs.
 1. You may use any framework that helps interfacing with your script, such as CLI or server frameworks.
+1. You may use any framework useful for interacting with HTML, such as [BeautifulSoup](https://pypi.org/project/beautifulsoup4/#:~:text=Beautiful%20Soup%20is%20a%20library,and%20modifying%20the%20parse%20tree.).
 1. The solution must be general and not tailored to any specific site.
 1. You can use any programming language.
 
