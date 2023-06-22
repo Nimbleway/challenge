@@ -1,27 +1,43 @@
 # Nimble Challenge
 
-Web pages are generally semi-structured data, where useful data is placed in HTML tags that are easy for a human to parse when rendered in the browser, but don't always make sense to a traditional computer program without a human to guide it.
+When scraping websites for useful data, a very common type of site to stumble upon is a page containing a list of links to other pages that contain entities (such as products, people, real-estate listings etc.). Often, when the number of entities offered by the website is large, the page will also contain links to more such pages.
 
-In this challenge, we are interested in fetching all entities of a certain type from a website.
+In this challenge, you will create an AI-powered web crawler capable of traversing any paginated website and extract URLs leading to the entities contained within, without implementing the logic yourself for each type of page.
 
-You are going to implement an AI powered web crawler that can traverse paginated websites of entities and collect their URLs! For this purpose, you have received keys to Nimble's Web API as well as OpenAI's API.
+Your script will take a URL of a page containing entities, will leverage AI to classify which links inside the page lead to a relevant page and keep it, discarding all unuseful links the page may contain. If the page has a pagination element that leads to more pages, you will traverse them similarly to extract more such URLs.
 
-Your script's input will be a web URL, and your script will utilize AI to /_ TODO _/
+To accomplish this, you will utilize **Nimble's Web API** to fetch the websites' HTML content, and **OpenAI's API** to leverage an LLM for parsing the page and deiciding which elements lead to the entities that are the subject of the page, and which lead to pages that might contain more of the entities we're looking for.
 
 Example:
 
 ```sh
 $ python ./solution "https://www.gsmarena.com/samsung-phones-9.php"
+
+https://www.gsmarena.com/samsung_galaxy_f54-12239.php
+https://www.gsmarena.com/samsung_galaxy_a24_4g-12176.php
+https://www.gsmarena.com/samsung_galaxy_f14-12175.php
+https://www.gsmarena.com/samsung_galaxy_m54-12189.php
+https://www.gsmarena.com/samsung_galaxy_a54-12070.php
+https://www.gsmarena.com/samsung_galaxy_a34-12074.php
+...
+
+$ python ./solution "https://www.etsy.com/search?q=handmade+furniture"
+
+https://www.etsy.com/listing/965245133/custom-neon-sign-neon-sign-aesthetic
+https://www.etsy.com/listing/1203360316/custom-neon-sign-neon-sign-aesthetic
+https://www.etsy.com/listing/844235389/essential-wooden-ambience-lamp-home
+https://www.etsy.com/listing/1480559129/mid-century-modern-scandinavian-lift-top
+https://www.etsy.com/listing/824406862/zen-lamp-handmade-in-bali-wood-rattan
+https://www.etsy.com/listing/1425154495/record-player-stand-vinyl-record-storage
+...
 ```
 
 ## Rules
 
-1. Using Nimble's Web API is **optional**.
+1. Using Nimble's Web API is **optional**, but very recommended.
 1. Using OpenAI's API is **optional**, but very recommended.
-1. No other third-party API or framework other than an HTTP client can be used for fetching or parsing HTML pages.
 1. You may use any framework that helps interfacing with your script, such as CLI or server frameworks.
 1. The solution must be general and not tailored to any specific site.
-1. Solution must be easy to use. A stand-alone script is acceptable.
 1. You can use any programming language.
 
 ## Grading
