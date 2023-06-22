@@ -6,7 +6,7 @@ In this challenge, you will create an AI-powered web crawler capable of traversi
 
 Your script will take a URL of a page containing entities, will leverage AI to classify which links inside the page lead to a relevant page and keep it, discarding all unuseful links the page may contain. If the page has a pagination element that leads to more pages, you will traverse them similarly to extract more such URLs.
 
-To accomplish this, you will utilize **Nimble's Web API** to fetch the websites' HTML content, and **OpenAI's API** to leverage an LLM for parsing the page and deiciding which elements lead to the entities that are the subject of the page, and which lead to pages that might contain more of the entities we're looking for.
+To accomplish this, you will utilize [**Nimble's Web API**](https://docs.nimbleway.com/nimble-api/web-api) to fetch the websites' HTML content, and [**OpenAI's API**](https://platform.openai.com/docs/api-reference/introduction) to leverage an LLM for parsing the page and deiciding which elements lead to the entities that are the subject of the page, and which lead to pages that might contain more of the entities we're looking for.
 
 Example:
 
@@ -36,21 +36,27 @@ https://www.etsy.com/listing/1425154495/record-player-stand-vinyl-record-storage
 
 1. Using Nimble's Web API is **optional**, but very recommended to avoid being blocked by anti-bots.
 1. Using OpenAI's API is **optional**, but very recommended as it is today's leading provider of integration with LLMs.
+1. The examples showcase a CLI, but you can wrap the crawler in any way that you prefer such as a server etc.
 1. You may use any framework that helps interfacing with your script, such as CLI or server frameworks.
 1. You may use any framework useful for interacting with HTML, such as [BeautifulSoup](https://pypi.org/project/beautifulsoup4/#:~:text=Beautiful%20Soup%20is%20a%20library,and%20modifying%20the%20parse%20tree.).
 1. The solution must be general and not tailored to any specific site.
-1. You can use any programming language.
+1. You can use any programming language. We recommend either Python or Typescript.
 
 ## Grading
 
-As long as your end solution is working reasonably within the constraints above - it will be accepted. Well done!
+As long as your end solution is working reasonably well within the constraints above - it will be accepted. Well done!
 
 For the purpose of ranking, your solution will be graded according to the following metrics and guidelines:
 
 - Recall and precision of fetched data.
-- Bonus: Efficiency of solution.
-- Bonus: Output is well structured e.g. CSV, JSON, XML
-
-## Hints
+- **Bonus**: Efficiency of solution.
+- **Bonus**: Output is well structured e.g. CSV, JSON, XML
 
 ## Submission
+
+When you are ready to submit your solution, please send us an email at **challenge@nimbleway.com** from the email with which you've registered, and include either:
+
+- A link to a git repository containing your solution. Make sure it is public and/or visible to our judges.
+- An archive file such as a ZIP or RAR file containing the readable source code of your solution.
+
+In addition, enclosing a README file with instructions on how to run your solution will be appreciated.
