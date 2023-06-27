@@ -34,6 +34,7 @@ https://www.etsy.com/listing/1425154495/record-player-stand-vinyl-record-storage
 
 ## Rules
 
+1. The input will be a URL string. The output should be a list of URLs leading to the entities that are the subjects of the page.
 1. For simplicity, you don't have to scan more than 3 pages if more than 3 are present.
 1. Only pagination where the pages are explicitly enumerated is relevant to the challenge. Infinite scrolling pages are out of scope.
 1. Using Nimble's Web API is **optional**, but very recommended to avoid being blocked by anti-bots, and to get rendered pages.
@@ -52,7 +53,6 @@ For the purpose of ranking, your solution will be graded according to the follow
 
 - Recall and precision of fetched data.
 - **Bonus**: Efficiency of solution.
-- **Bonus**: Output is well structured e.g. CSV, JSON, XML
 
 ## Hints
 
@@ -62,11 +62,21 @@ For the purpose of ranking, your solution will be graded according to the follow
 - Some pages require rendering. This can be achieved by passing `render: true` to the request to Nimble's Web API.
 - Nimble and OpenAI's APIs have rate limits. If you pass them, you might get an error that is solvable with a retry mechanism.
 
+## Support
+
+In case you have any question or require help, please send an e-mail to challenge@nimbleway.com.
+
 ## Submission
 
-When you are ready to submit your solution, please send us an email at **challenge@nimbleway.com** from the email with which you've registered, and include either:
+When you are ready to submit your solution, please send it to us using the [submission form](https://share-eu1.hsforms.com/1w1IjCNviS1iSe8JmQtv4fgf1fv2).
+
+When submitting your solution, include either:
 
 - A link to a git repository containing your solution. Make sure it is public and/or visible to our judges.
 - An archive file such as a ZIP or RAR file containing the readable source code of your solution.
 
 In addition, enclosing a README file with instructions on how to run your solution will be appreciated.
+
+By submitting your solution, you agree to [the challenge's terms and conditions](https://www.nimbleway.com/terms-conditions-challenge).
+
+Good luck!
