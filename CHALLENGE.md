@@ -34,7 +34,9 @@ https://www.etsy.com/listing/1425154495/record-player-stand-vinyl-record-storage
 
 ## Rules
 
-1. Using Nimble's Web API is **optional**, but very recommended to avoid being blocked by anti-bots.
+1. For simplicity, you don't have to scan more than 3 pages if more than 3 are present.
+1. Only pagination where the pages are explicitly enumerated is relevant to the challenge. Infinite scrolling pages are out of scope.
+1. Using Nimble's Web API is **optional**, but very recommended to avoid being blocked by anti-bots, and to get rendered pages.
 1. Using OpenAI's API is **optional**, but very recommended as it is today's leading provider of integration with LLMs.
 1. The examples showcase a CLI, but you can wrap the crawler in any way that you prefer such as a server etc.
 1. You may use any framework that helps interfacing with your script, such as CLI or server frameworks.
@@ -51,6 +53,13 @@ For the purpose of ranking, your solution will be graded according to the follow
 - Recall and precision of fetched data.
 - **Bonus**: Efficiency of solution.
 - **Bonus**: Output is well structured e.g. CSV, JSON, XML
+
+## Hints
+
+- You can use [this list of paginated websites](/sites.md) as reference.
+- Consider preprocessing the page before sending it to the LLM.
+- The GPT 3.5 LLM is good at reading HTML, but you can try converting the page to other formats.
+- Some pages require rendering. This can be achieved by passing `render: true` to the request to Nimble's Web API.
 
 ## Submission
 
