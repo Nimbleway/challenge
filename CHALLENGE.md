@@ -60,6 +60,7 @@ For the purpose of ranking, your solution will be graded according to the follow
 - Consider preprocessing the page before sending it to the LLM.
 - The GPT 3.5 LLM is good at reading HTML, but you can try converting the page to other formats.
 - Some pages require rendering. This can be achieved by passing `render: true` to the request to Nimble's Web API.
+- Nimble and OpenAI's APIs have rate limits. If you pass them, you might get an error that is solvable with a retry mechanism.
 
 ## Submission
 
