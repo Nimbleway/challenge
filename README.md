@@ -83,7 +83,7 @@ In case you have any question or require help, please send an e-mail to challeng
 
 ## Submission
 
-When you are ready to submit your solution, please send it to us using the [submission form](https://share-eu1.hsforms.com/1w1IjCNviS1iSe8JmQtv4fgf1fv2).
+When you are ready to submit your solution, please send it to us using the [submission form](https://763p1qm7qkl.typeform.com/to/PDAhOjZ4).
 
 When submitting your solution, include either:
 
